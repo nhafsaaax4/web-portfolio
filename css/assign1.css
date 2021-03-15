@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #FDF5E6;
+  /* Sets the background color to beige*/
+}
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav_links {
+  list-style: none;
+  text-align: center;
+}
+
+.nav_links li {
+  display: inline-block;
+  /* width and height */
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+#assignment-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 80;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  /* color value- transparency or opacity*/
+  border: none;
+  display: flex;
+}
+
+/*hover effect for navigation bar buttons*/
+button :hover {
+  color: #FDF5E6;
+  background-color: rgba(0, 136, 169, 1);
+}
+
+.assignment-buttons {
+  text-align: center;
+  margin: 3em;
+}
+
+
+.assignment-buttons-1,
+.assignment-buttons-2,
+.assignment-buttons-3,
+.assignment-buttons-4,
+.assignment-buttons-5,
+.assignment-buttons-6,
+.assignment-buttons-7,
+.assignment-buttons-8,
+.assignment-buttons-9 {
+  margin: 4px;
+  padding: 2em;
+  width: 8cm;
+  height: 4cm;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FDF5E6;
+  color: #FDF5E6;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 3px, 3px, 3px, 3px;
+  background-color: rgba(0, 136, 169, 1);
+}
+
+
+.assignment-buttons-1:hover,
+.assignment-buttons-2:hover,
+.assignment-buttons-3:hover,
+.assignment-buttons-4:hover,
+.assignment-buttons-5:hover,
+.assignment-buttons-6:hover,
+.assignment-buttons-7:hover,
+.assignment-buttons-8:hover,
+.assignment-buttons-9:hover {
+  color: rgba(0, 136, 169, 1);
+  background-color: #FDF5E6;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 136, 169, 1);
+  /* color value- transparency or opacity*/
+  padding: 60px 0px;
+  margin-top: auto;
+}
+
