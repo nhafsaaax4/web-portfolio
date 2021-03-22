@@ -78,7 +78,7 @@ function largernumber(){
         console.log ("Four");
       }
       else{
-        console.log (i);
+        console.log (i);3
       }
     }
       document.getElementById("assignment 6").innerHTML = output;
