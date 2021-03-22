@@ -44,25 +44,28 @@ function threeNumberSort() {
 }
 
 //Assignment 4
-function SumOfThrees() {
-  let sum = 0;
-  for (let i = 0; i < 1000; i++) {
-      ! (i % 3) && (sum += i)
+function forSumThrees() {
+  var i; 
+  var text = "";
+  var sum = 0; 
+  for (i = 0; i < 1000; i += 3) { 
+      sum += i;
+      text = "The number is " + sum; 
   }
-  output = "The sum of three is, " + sum + ".";
-  document.getElementById("SumThree").innerHTML = output;
+  document.getElementById('button4').innerHTML = text; 
 }
 
 //Assignment 5
-function WhileThrees(){
-  let sum = 0;
-  let i = 0;
-   while (i < 1000) {
-       sum += i;
-       i = i + 3;
-   }
-   output = "The while of three is, " + sum + ".";
-   document.getElementById("WhileThree").innerHTML = output;
+function whileSumThrees() {
+  let sum = 0; 
+  let i = 0; 
+  while (i < 1000) { 
+      i++; 
+      if (i % 3 === 0) {
+          sum += i;
+      }
+  }
+  document.getElementById("button5").innerHTML = "The number is " + sum; //Output to user 
 }
 
 //Assignment 6
