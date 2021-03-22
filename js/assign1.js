@@ -1,126 +1,121 @@
-///Assignment 1
-function largerNumber() {
-  let num1 = parseInt(prompt('Insert an number! :'))
-  let num2 = parseInt(prompt('Insert another number to find out which one is larger!'))
-
-  if (num1 > num2) {
-    return alert('If the calculations are correct, ' + num1 + ' is larger!');
-  } else if (num2 > num1) {
-    return alert('If the calculations are correct, ' + num2 + ' is larger!');
-  } else if (num1 == num2) {
-    return alert('If the calculations are correct, it seems as if ' + num1 + ' and ' + num2 + ' are the same!');
-  } else {
-    alert('Please enter 2 numbers!');
+//Assignment Exercise 1//
+function largernumber(){
+      let num1 = parseInt(prompt("Enter the first number: "));
+      let num2 =  parseInt(prompt("Enter the second number: "));
+      let output = ""
+      if (num1 > num2){
+          output = num1;
+      } else if (num1 == num2){
+          output = "The numbers entered are equal to.";
+      } else if (num2 > num1){
+          output = num2;
+      } else {
+          output = "Invalid Output.";
+      }
+      document.getElementById("assignment 1").innerHTML = output;
   }
-};
-
-//Assignment 2
-function signOfProduct() {
-  let numSign = parseInt(prompt('Let\'s find the sign of a product! Enter a number', '0'));
-  let numSign2 = parseInt(prompt('Enter another number', '0'));
-  let numSign3 = parseInt(prompt('Enter one last number', '0'));
-  if (numSign * numSign2 * numSign3 > 0) {
-    return alert('The sign for the product of ' + numSign + ' ,' + numSign2 + ' and ' + numSign3 + ' is positive')
-
-  } else if (numSign * numSign2 * numSign3 < 0) {
-    return alert('The sign for the product of ' + numSign + ' ,' + numSign2 + ' and ' + numSign3 + ' is negative')
-  } else {
-    return alert('Please enter 3 numbers')
+  
+  //Assignment Exercise 2//
+  function signOfProduct(){
+      var a = parseInt(prompt("Enter a number"));
+      var b = parseInt(prompt("Enter a number"));
+      var c = parseInt(prompt("Enter a number"));
+      var totalProduct = a * b * c;
+      if (totalProduct < 0 ){
+        output = "The sign of the product is -."; 
+      }
+      if (totalProduct > 0 ){
+        output = "The sign of the product is +.";  
+      }
+      document.getElementById("assignment 2").innerHTML = output;
   }
-}
-
-//Assignment 3
-function threeNumberSort() {
-
-  let num1 = parseInt(prompt('Let\'s sort some numbers! Enter a number!'));
-  let num2 = parseInt(prompt('Enter another number!'));
-  let num3 = parseInt(prompt('Enter one last number!'));
-
-  let numSort = [num1, num2, num3];
-  numSort.sort(function(a, b) {
-    return a - b
-  })
-  return alert('These are the numbers you have entered from least to greatest: ' + numSort);
-}
-
-//Assignment 4
-function forSumThrees() {
-  var i; 
-  var text = "";
-  var sum = 0; 
-  for (i = 0; i < 1000; i += 3) { 
-      sum += i;
-      text = "The number is " + sum; 
+  
+  //Assignment Exercise 3//
+  function threeNumberSort() {
+      var a = parseInt(prompt("Enter a number."));
+      var b = parseInt(prompt("Enter a number."));
+      var c = parseInt(prompt("Enter a number."));
+      let array = [a, b, c];
+      array.sort(function(a, b, c){return a - b});{
+          output = "The number you entered have been ordered from from least to greatest. The order is, " + array + ".";
+      }
+      document.getElementById("assignment 3").innerHTML = output;
   }
-  document.getElementById('button4').innerHTML = text; 
-}
-
-//Assignment 5
-function whileSumThrees() {
-  let sum = 0; 
-  let i = 0; 
-  while (i < 1000) { 
-      i++; 
-      if (i % 3 === 0) {
-          sum += i;
-      }
+  
+  //Assignment Exercise 4//
+  function SumOfThrees() {
+      let sum = 0;
+      for (let i = 0; i < 1000; i++) {
+          ! (i % 3) && (sum += i)
+      }
+      output = "The sum of three is, " + sum + ".";
+      document.getElementById("assignment 4").innerHTML = output;
   }
-  document.getElementById("button5").innerHTML = "The number is " + sum; //Output to user 
-}
-
-//Assignment 6
-function tenFour() {
-  let multiples410 = 0;
-   for(i = 1; i<101; i = i +1){
-       if(i % 4 === 0 && i % 10 === 0){
-          multiples410 += (' TenFour, ');
-       }
-       else if(i % 4 === 0){
-          multiples410 += (' Four, ');
-       }
-       else if(i % 10 === 0){
-          multiples410 += ('Ten, ');
-       }
-       else(multiples410 += ' ' + i + ' ');
-   }
-  alert (multiples410);
-}
-
-//Assignment 7
-function centuryFromYear() {
-  let userYear = prompt(' Enter a year and find out what century is any year in!', '2020');
-  let century = 0;
-
-  century = Math.floor(userYear / 100 + 1);
-  if (toString(century)[-1] == 1) {
-    century = toString(century) + 'st'
+  
+  //Assignment Exercise 5//
+  function WhilesumThrees(){
+      let sum = 0;
+      let i = 0;
+       while (i < 1000) {
+           sum += i;
+           i = i + 3;
+       }
+       output = "The while of three is, " + sum + ".";
+       document.getElementById("assignment 5").innerHTML = output;
   }
-
-  return alert('The year you entered is in the century of ' + century);
-}
-
-//Assignment 8
-function thirdAngle() {
-
-  let angle1 = parseInt(prompt('Finding an angle for a triangle may be hard. Let\'s find the missing angle for a triangle together! Enter an angle'));
-  let angle2 = parseInt(prompt('Enter another second angle'));
-
-  let totalAngle = angle1 + angle2;
-
-  if (totalAngle < 180) {
-    let missingAngle = 180 - totalAngle;
-
-    return alert('The missing angle is ' + totalAngle);
-  } else if (totalAngle > 180) {
-    return alert('The angles in a triangle add up to 180. The angles you entered are larger than 180!')
-  } else {
-    alert('Please enter valid angles.')
+  
+  //Assignment Exercise 6//
+  function tenFour() {
+      let multiples410 = 0;
+       for(i = 1; i<101; i = i +1){
+           if(i % 4 === 0 && i % 10 === 0){
+              multiples410 += (' TenFour, ');
+           }
+           else if(i % 4 === 0){
+              multiples410 += (' Four, ');
+           }
+           else if(i % 10 === 0){
+              multiples410 += ('Ten, ');
+           }
+           else(multiples410 += ' ' + i + ' ');
+       }
+      alert (multiples410);
+      document.getElementById("assignment 6").innerHTML = output;
   }
-}
+  
+  //Assignment Exercise 7//
+  function centuryFromYear() {
+      let userYear = prompt ('Are you wondering what century any year could be in, I found a way!. Enter a year', '2021');
+      let century = 0;
+      century = Math.floor(userYear/100+1);
+          if (toString(century)[-1] == 1){ 
+      }
+      output = "The year you entered is in the century of " + century + ".";
+      document.getElementById("assignment 7").innerHTML = output;  
+  }
+  
+  //Assignment Exercise 8//
+  function thirdAngle() {
+      alert ("Trying to calculate the missing angle of a triangle? Insert the two angles of a triangles inorder to find the third angle" );
+      var a = parseInt(prompt("Enter the first angle of a triangle"));
+      var b = parseInt(prompt("Enter the second angle of a triangle "));
+      var totalSum = 0;
+      if ((a + b) < 180){
+      totalSum = 180 - (a + b); 
+          alert ("The missing angle is, " + totalSum + ".");
+          output = "The missing angle is, " + totalSum + ".";
+      }
+      else if ((a + b) > 180){
+          alert ("Incorrect. Enter two angles of a triangle."); 
+          output = "Incorrect. Enter two angles of a triangle.";
+      }
+      document.getElementById("assignment 8").innerHTML = output;  
+  }
 
 //Assignment 9
 function function9() {
   alert("Assignment 9 is not completed...Please wait.");
+  document.getElementById("assignment 9").innerHTML = output;
 }
   
   
