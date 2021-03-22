@@ -1,4 +1,4 @@
-//Assignment 1
+///Assignment 1
 function largerNumber() {
   let num1 = parseInt(prompt('Insert an number! :'))
   let num2 = parseInt(prompt('Insert another number to find out which one is larger!'))
