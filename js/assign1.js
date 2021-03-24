@@ -66,7 +66,6 @@ function largernumber(){
   
   //Assignment Exercise 6//
   function tenFour() { 
-  
     let multiples410 = 0;
      for(i = 1; i<101; i = i +1){
          if(i % 4 === 0 && i % 10 === 0){ 
