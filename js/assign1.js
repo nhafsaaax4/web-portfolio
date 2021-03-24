@@ -65,24 +65,24 @@ function largernumber(){
   }
   
   //Assignment Exercise 6//
-  function tenFour() {
-    for (i = 1; i <= 100; i++) {
- 
-        if (i % 4 == 0 && i % 10 == 0) {
-            console.log("TenFour");
-        }
-        else if (i % 4 == 0) {
-          console.log("Four");
-        }
-        else if (i % 10 == 0) {
-            console.log("Ten");
-        }
-        else {
-            console.log(i);
-        }
-    }
+  function tenFour() { 
+    let multiples410 = 0;
+     for(i = 1; i<101; i = i +1){
+         if(i % 4 === 0 && i % 10 === 0){ 
+            multiples410 += (' TenFour.'); 
+         }
+         else if(i % 4 === 0){ 
+            multiples410 += (' Four.'); 
+         }
+         else if(i % 10 === 0){ 
+            multiples410 += ('Ten.'); 
+         }
+         else(multiples410 += ' ' + i + ' '); 
+     }
+    alert (multiples410);
+
     document.getElementById("assignment 6").innerHTML = output;
-}
+  }
   
   //Assignment Exercise 7//
   function centuryFromYear() {
@@ -96,22 +96,21 @@ function largernumber(){
   }
   
   //Assignment Exercise 8//
-  function thirdAngle() {
-      alert ("Trying to calculate the missing angle of a triangle? Insert the two angles of a triangles inorder to find the third angle" );
-      var a = parseInt(prompt("Enter the first angle of a triangle"));
-      var b = parseInt(prompt("Enter the second angle of a triangle "));
-      var totalSum = 0;
-      if ((a + b) < 180){
-      totalSum = 180 - (a + b); 
-          alert ("The missing angle is, " + totalSum + ".");
-          output = "The missing angle is, " + totalSum + ".";
-      }
-      else if ((a + b) > 180){
-          alert ("Incorrect. Enter two angles of a triangle."); 
-          output = "Incorrect. Enter two angles of a triangle.";
-      }
-      document.getElementById("assignment 8").innerHTML = output;  
-  }
+  function thirdAngle() { 
+
+    alert (" Trying two find an angle with two given angles. Insert two angles of a triangle and the function will return the third angle, totaling to 180°." );
+    let a = parseInt(prompt("Enter the first angle")); 
+    let b = parseInt(prompt("Enter the second angle"));
+    let totalSum = 0;
+    if ((a + b) < 180){ 
+    totalSum = 180 - (a + b); 
+        output = "The angle that is missing is, " + totalSum + "."; 
+    }
+    else if ((a + b) > 180){ 
+        output = "Invalid. Please enter two angles of a triangle."; 
+    }
+    document.getElementById("assignment 8").innerHTML = output;  
+}
 
 //Assignment 9
 function function9() {
