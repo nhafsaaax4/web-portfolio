@@ -65,23 +65,25 @@ function largernumber(){
   }
   
   //Assignment Exercise 6//
-  function tenFour() {
-    let forloop = 0
-    for (let i=1; i<=100; i++){
-      if (i%4===0&&i%10===0){
-        console.log ("TenFour!");
-      }
-      else if (i%10===0){
-        console.log ("Ten");
-      }
-      else if (i%4===0){
-        console.log ("Four");
-      }
-      else{
-        console.log (i);3
-      }
+  function tenFour(){
+  
+    let answer = '';
+    
+    for(let i = 1; i <= 100; i++) {
+      
+      ((i % 4 === 0 && i % 10 === 0)
+        ? answer += ('TenFour!')
+        : (i % 4 === 0)
+        ? answer += ('Four')
+        : (i % 10 === 0)
+        ? answer += ('Ten')
+        : answer += (` ${i} `)
+      );
+  
     }
-      document.getElementById("assignment 6").innerHTML = output;
+  
+    document.getElementById("assignment 6").innerHTML = answer;
+  
   }
   
   //Assignment Exercise 7//
