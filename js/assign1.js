@@ -65,26 +65,24 @@ function largernumber(){
   }
   
   //Assignment Exercise 6//
-  function tenFour(){
+  function tenFour() { 
   
-    let answer = '';
-    
-    for(let i = 1; i <= 100; i++) {
-      
-      ((i % 4 === 0 && i % 10 === 0)
-        ? answer += ('TenFour!')
-        : (i % 4 === 0)
-        ? answer += ('Four')
-        : (i % 10 === 0)
-        ? answer += ('Ten')
-        : answer += (` ${i} `)
-      );
-  
-    }
-  
-    document.getElementById("assignment 6").innerHTML = answer;
-  
-  }
+    let multiples410 = 0;
+     for(i = 1; i<101; i = i +1){
+         if(i % 4 === 0 && i % 10 === 0){ 
+            multiples410 += (' TenFour.'); 
+         }
+         else if(i % 4 === 0){ 
+            multiples410 += (' Four.'); 
+         }
+         else if(i % 10 === 0){ 
+            multiples410 += ('Ten.'); 
+         }
+         else(multiples410 += ' ' + i + ' '); 
+     }
+    alert (multiples410); 
+    document.getElementById("assignment 6").innerHTML = output;
+}
   
   //Assignment Exercise 7//
   function centuryFromYear() {
