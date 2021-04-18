@@ -80,7 +80,9 @@ button :hover {
 .assignment-buttons-6,
 .assignment-buttons-7,
 .assignment-buttons-8,
-.assignment-buttons-9 {
+.assignment-buttons-9, 
+.assignment-buttons-10
+{
   margin: 4px;
   padding: 2em;
   width: 8cm;
@@ -104,9 +106,11 @@ button :hover {
 .assignment-buttons-6:hover,
 .assignment-buttons-7:hover,
 .assignment-buttons-8:hover,
-.assignment-buttons-9:hover {
+.assignment-buttons-9:hover,
+.assignment-button-10:hover {
   color: rgba(0, 136, 169, 1);
   background-color: #FDF5E6;
+
 }
 
 footer {
