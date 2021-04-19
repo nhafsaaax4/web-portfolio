@@ -135,11 +135,11 @@ function largernumber(){
 //Assignment Exercise 10//
 function decryption(){
   let ciphertext = prompt ("Enter your encrypted message:"); //user inputs the encrypted message
-  let plaintext = ""; 
-  ciphertext = ciphertext.split(" "); // splitting words in the string  
-  for(let i = 0; i < ciphertext.length; i = i + 1) { // loop to make changes in text 
-      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // chnages the first letter in the message with slice 
-      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //  changes the last letter in the message with slice
+  let plaintext = ""; //empty variable called plain text
+  ciphertext = ciphertext.split(" "); 
+  for(let i = 0; i < ciphertext.length; i = i + 1) {  //when i=0, length of cipertext should be less and add 1
+      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); //new variable... slices numbers from decrypted messages and makes it lowercase.
+      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //new variable...slices cipertext and makes ir lowercase
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
   document.getElementById("assignment 10").innerHTML = plaintext; 
