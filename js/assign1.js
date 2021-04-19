@@ -134,8 +134,14 @@ function largernumber(){
 
 //Assignment Exercise 10//
 function decryption(){
-
+  let ciphertext = prompt ("Enter your encrypted message:"); //user inputs the encrypted message
+  let plaintext = ""; 
+  ciphertext = ciphertext.split(" "); // splitting words in the string  
+  for(let i = 0; i < ciphertext.length; i = i + 1) { // loop to make changes in text 
+      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); // chnages the first letter in the message with slice 
+      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //  changes the last letter in the message with slice
+      plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
+  }
   document.getElementById("assignment 10").innerHTML = plaintext; 
-  
   
 }
