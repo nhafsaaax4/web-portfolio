@@ -143,10 +143,5 @@ function decryption(){
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
   document.getElementById("assignment 10").innerHTML = plaintext; 
-  
 
-
-  function newFunction() {
-    return 5;
   }
-}
