@@ -135,8 +135,8 @@ function largernumber(){
 //Assignment Exercise 10//
 function decryption(){
   let ciphertext = prompt ("Enter your encrypted message:"); //user inputs the encrypted message
-  let plaintext = (""); //empty variable called plain text
-  ciphertext = ciphertext.split(); 
+  let plaintext = ""; //empty variable called plain text
+  ciphertext = ciphertext.split(""); 
   for(let i = 0; i < ciphertext.length; i = i + 1) {  //when i=0, length of cipertext should be less and add 1
       firstletter = ((ciphertext[i]).slice(-newFunction(), -4)); //new variable... slices numbers from decrypted messages and makes it lowercase.
       lastletter = ((ciphertext[i]).toLowerCase().slice(-3, -2)); //new variable...slices cipertext and makes ir lowercase
