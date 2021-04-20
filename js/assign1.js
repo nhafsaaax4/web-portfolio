@@ -120,8 +120,8 @@ function largernumber(){
 //Assignment Exercise 9//
   function encryption() {
     let plaintext = prompt ("Please enter a message:"); // enter message
-    let ciphertext = ();
-    plaintext = plaintext.split(" "); //breaks word into array or substrings
+    let ciphertext = ("");
+    plaintext = plaintext.split(); //breaks word into array or substrings
     for(let i = 0; i < plaintext.length; i = i + 1) {  // i = 0, plaintext- variable less than number of character, '.length' returns lenght of msg user sends
         firstletter = ((plaintext[i][0]).replace("", "zm")).toUpperCase(); // uppercases of the first letter in word has a 'zm' between them first and second letter
         lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "w"); // uppercase in the last letter of the word is followed by a ‘w’ in front of it
@@ -129,7 +129,7 @@ function largernumber(){
 
     }
     document.getElementById("assignment 9").innerHTML = ciphertext;  
-    alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) // alert to display given msg
+    alert("Your encrypted message is: " + ciphertext) // alert to display given msg
 }
 
 //Assignment Exercise 10//
