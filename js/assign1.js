@@ -117,31 +117,59 @@ function largernumber(){
     document.getElementById("assignment 8").innerHTML = output;  
 }
 
-//Assignment Exercise 9//
-  function encryption() {
-    let plaintext = prompt ("Please enter a message:"); // enter message
-    let ciphertext = ("");
-    plaintext = plaintext.split(); //breaks word into array or substrings
-    for(let i = 0; i < plaintext.length; i = i + 1) {  // i = 0, plaintext- variable less than number of character, '.length' returns lenght of msg user sends
-        firstletter = ((plaintext[i][0]).replace("", "zm")).toUpperCase(); // uppercases of the first letter in word has a 'zm' between them first and second letter
-        lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "w"); // uppercase in the last letter of the word is followed by a ‘w’ in front of it
-        ciphertext += "ss" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "ss" ; // ‘ss' to the first and last letter of the changed word.
 
+  //Assignment 9//
+  function encryption(){
+
+    let plaintext = prompt('Enter a message');
+    let etext = "";
+
+    plaintext = plaintext.split(" "); //breaking words of the messgae into substrings 
+
+    for(let i = 0; i < plaintext.length; i= i+ 1 ){ // i = 0, plaintext- variable less than number of character, '.length' returns lenght of msg user sends
+        if(plaintext[i].length >= 2){
+            let firstletter = plaintext[i][0]; //first letter on encrypted text = first letter of plain text
+            let secondletter = plaintext[i][1] // second letter of encrypted text = second letter of plain text
+            //encrypted text code "zm" , "ss" , "w"
+           etext += 'zm' + (plaintext[i]).slice(1) + 'ss' + secondletter + firstletter + "w" + ' '
+        }
+        else {
+            let firstletter = plaintext[i][0];
+            etext += (plaintext[i][0]) + '9d6' + firstletter + ' '; //excrypted text= //first letter on encrypted text = first letter of plain text + "969" + "w"
+        }
     }
-    document.getElementById("assignment 9").innerHTML = ciphertext;  
-    alert("Your encrypted message is: " + ciphertext) // alert to display given msg
+    alert("The encrypted message is " + etext ); //output of encrypted text
+    document.getElementById("assignment 9").innerHTML = teext;  
 }
 
-//Assignment Exercise 10//
-function decryption(){
-  let ciphertext = prompt ("Enter your encrypted message:"); //user inputs the encrypted message
-  let plaintext = ""; //empty variable called plain text
-  ciphertext = ciphertext.split(""); 
-  for(let i = 0; i < ciphertext.length; i = i + 1) {  //when i=0, length of cipertext should be less and add 1
-      firstletter = ((ciphertext[i]).slice(-newFunction(), -4)); //new variable... slices numbers from decrypted messages and makes it lowercase.
-      lastletter = ((ciphertext[i]).toLowerCase().slice(-3, -2)); //new variable...slices cipertext and makes ir lowercase
-      plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
-  }
-  document.getElementById("assignment 10").innerHTML = plaintext; 
+  //assignment 10//
+  function decryption(){
+    let ciphertext = prompt("Enter your encrypted text message")
+    let plaintext = " "; //decrypted text
+    let decrypt = " "; //letter value of encrypted text moved to the front of decrpted text
+    let text= " ";
+    
+    ciphertext = ciphertext.split(" "); 
+    for(let i = 0; i < ciphertext.length; i = i + 1){ //when i=0, length of cipertext should be less and add 1
+      
+        //Replacing 'zm', 'ss' , 'w', '9d6' 
+        ciphertext[i] = ciphertext[i].replace(/zm/g, ""); 
+        ciphertext[i] = ciphertext[i].replace(/ss/g, "");                  
+        ciphertext[i] = ciphertext[i].replace(/w/g, "");                     
+        ciphertext[i] = ciphertext[i].replace(/9d6/g, "");                  
+    
+        if(ciphertext[i].length > 2){
+     decrypt = ciphertext[i].slice(-1);
+     text =  (ciphertext[i]).slice(0, -2); 
+    
+     plaintext += decrypt + text + ' ';
+        }
+        //one letter words
+        else {
+          plaintext += ciphertext[i][0] + " ";
+            }
+    }
+    alert('Your original message was ' +  plaintext)
+    document.getElementById("assignment 9").innerHTML = plaintext;
 
-  }
+    }
