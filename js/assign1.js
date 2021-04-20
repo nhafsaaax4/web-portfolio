@@ -138,10 +138,15 @@ function decryption(){
   let plaintext = ""; //empty variable called plain text
   ciphertext = ciphertext.split(" "); 
   for(let i = 0; i < ciphertext.length; i = i + 1) {  //when i=0, length of cipertext should be less and add 1
-      firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); //new variable... slices numbers from decrypted messages and makes it lowercase.
-      lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); //new variable...slices cipertext and makes ir lowercase
+      firstletter = ((ciphertext[i]).slice(-newFunction(), -4)); //new variable... slices numbers from decrypted messages and makes it lowercase.
+      lastletter = ((ciphertext[i]).toLowerCase().slice(-3, -2)); //new variable...slices cipertext and makes ir lowercase
       plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
   }
   document.getElementById("assignment 10").innerHTML = plaintext; 
   
+
+
+  function newFunction() {
+    return 5;
+  }
 }
