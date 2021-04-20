@@ -120,7 +120,7 @@ function largernumber(){
 //Assignment Exercise 9//
   function encryption() {
     let plaintext = prompt ("Please enter a message:"); // enter message
-    let ciphertext = "";
+    let ciphertext = ();
     plaintext = plaintext.split(" "); //breaks word into array or substrings
     for(let i = 0; i < plaintext.length; i = i + 1) {  // i = 0, plaintext- variable less than number of character, '.length' returns lenght of msg user sends
         firstletter = ((plaintext[i][0]).replace("", "zm")).toUpperCase(); // uppercases of the first letter in word has a 'zm' between them first and second letter
@@ -136,7 +136,7 @@ function largernumber(){
 function decryption(){
   let ciphertext = prompt ("Enter your encrypted message:"); //user inputs the encrypted message
   let plaintext = ""; //empty variable called plain text
-  ciphertext = ciphertext.split(" "); 
+  ciphertext = ciphertext.split(); 
   for(let i = 0; i < ciphertext.length; i = i + 1) {  //when i=0, length of cipertext should be less and add 1
       firstletter = ((ciphertext[i]).slice(-newFunction(), -4)); //new variable... slices numbers from decrypted messages and makes it lowercase.
       lastletter = ((ciphertext[i]).toLowerCase().slice(-3, -2)); //new variable...slices cipertext and makes ir lowercase
